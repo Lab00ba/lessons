@@ -17,10 +17,25 @@ def take_money(money):
             money -= amount
             print(f"Снято {amount}")
             print(f"Комиссия {comishns}")
+    except ValueError:
+        print("Некоректный ввод")
+    except ZeroDivisionError:
+        print("На 0 делить нельзя")
 
+def add_money(money):
+    try:
+        amount = int(input("Сумма пополнения: "))
+        if amount < 0:
+            print("Сумма пополнения не может быть отрицательной")
+        else:
+             money += amount
+             print(f"Ваш счет равен {money}")
+             return money
+    except ValueError:
+        print("Некоректный ввод")
 
-
-
+def check_money(money):
+    print(f"Ваш баланс: {money}")
 
 def main():
     money = 10_000
@@ -29,11 +44,11 @@ def main():
         try:
             num = int(input("Введите число из списка: "))
             if num == 1:
-                /
+                money = take_money(money)
             elif num == 2:
-                /
+                money = add_money(money)
             elif num == 3:
-                /
+                check_money(money)
             elif num == 4:
                 print("Вы вышли из программы.")
                 break
