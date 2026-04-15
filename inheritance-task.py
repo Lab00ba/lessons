@@ -15,7 +15,7 @@ class Worker:
     def salary(self):
         return f"Зарплата {self.__salary}"
 
-    @name.setter
+    @salary.setter
     def salary(self, new_salary):    
         self.__salary = new_salary
 
