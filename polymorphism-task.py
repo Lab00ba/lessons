@@ -72,6 +72,6 @@ card = Card()
 card.add(e1)
 card.add(c1)
 
-card.show()
+# card.show()
 card.delattr("Телефон")
 card.show()
